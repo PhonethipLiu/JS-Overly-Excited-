@@ -7,26 +7,35 @@ console.log("JS Overly excited is working");
 let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the", "light", "of", "the", "moon"];
 
 /*
-    The addExcitement function should be an impure function, and accept the array as the sole argument. It should iterate over the array
-    and output the words to the browser console.
+    The addExcitement function should be an impure function, and accept the array as the sole argument. It should iterate over the array and output the words to the browser console.
 */
-function addExcitement (theWordArray) {
-    let wordArray = [];
-    for (var i = 0; i < sentence.length; i++){
-        // if (i = 3)
-        console.log(wordArray += sentence[i] + " ");
-    }
-}
+// function addExcitement (theWordArray) {
+//     let wordArray = [];
+//     for (var i = 0; i < sentence.length; i++){
+//         console.log(wordArray += sentence[i] + " ");
+//     }
+// }
 
 // Invoke the function and pass in the array
-addExcitement(sentence);
-
+// addExcitement(sentence);
 
 
 // ============= Adding Conditions to the Loop =========//
 
+console.log("")
+//this works
+function addExcitement (theWordArray) {
+    let wordArray = [];
+    for (var i = 0; i < sentence.length; i++){
+        if (i % 3 > 1) {
+             sentence[i] += "!";    
+        }
+    console.log(wordArray += sentence[i] + " ");
+    }
+} 
 
-
+// Invoke the function and pass in the array
+addExcitement(sentence);
 
 
 
