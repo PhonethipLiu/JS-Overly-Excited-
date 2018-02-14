@@ -30,7 +30,7 @@ function addExcitement (theWordArray) {
         if (i % 3 > 1) {
              sentence[i] += "!";    
         }
-    console.log(wordArray += sentence[i] + " ");
+        console.log(wordArray += sentence[i] + " ");
     }
 } 
 
