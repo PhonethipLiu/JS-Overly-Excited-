@@ -10,20 +10,27 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
     The addExcitement function should be an impure function, and accept the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
+let wordArray =[];
+
 function addExcitement () {
-    let wordArray = [];
-    for (var i = 0; i < sentence.length; i++){
-        if (i % 3 > 1) {
-            sentence[i] += "!";  
-        }
-        console.log(wordArray += sentence[i] + " ");
+    
+    for (var i = 0; i < sentence.length; i++){ //loops thru sentence array
+        wordArray += " " + sentence[i]; //add the wordArray a space and index item from sentence array
+        console.log(wordArray); // this displays the looped words in sentence array
+
+        // ***** Even More Excited ****//
+        if (i % 3 > 1) { // conditions for the loop; if the remainder of index item is greater than 1 
+            let x = i / 3; // and the index is divisible by 3 
+            for (var j = 0; j < x; j++) // loop for this condition
+            wordArray += "!"; // then add an ! to the wordArray
+        } 
     }
-};
+     console.log(wordArray); // this displays the looped words in sentence array with the added ! when the conditions are met
+}
+
 
 // Invoke the function and pass in the array
 addExcitement(sentence);
-//addExcitement(sentence);
-//addExcitement(sentence);
 
 
 
